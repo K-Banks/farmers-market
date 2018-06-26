@@ -1,5 +1,5 @@
 import React from 'react';
-// import Produce from './produce';
+import Produce from './produce';
 
 const availableProduce = [
   {
@@ -274,13 +274,10 @@ function SeasonalProduce() {
   return(
     <div>
       <h2>Avery's Organics</h2>
-      {availableProduce.map((season) =>
-        <ul>
-          <h3>{season.month}</h3>
-          {season.selection.map((produce) =>
-            <li>{produce}</li>
-          )}
-        </ul>
+      {availableProduce.map((season, index) =>
+        <Produce month={season.month}
+          selection={season.selection}
+          key={index}/>
       )}
     </div>
   );

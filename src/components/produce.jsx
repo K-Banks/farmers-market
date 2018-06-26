@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 
 function Produce(props){
   return(
-    <div>
+    <ul>
       <h3>{props.month}</h3>
-      <ul>
-        {props.selection.map((produce, index) =>
-          <li id={index}>{produce}</li>
-        )}
-      </ul>
-    </div>
+      {props.selection.map((produce, index) =>
+        <li id={index}>{produce}</li>
+      )}
+    </ul>
   );
 }
 
