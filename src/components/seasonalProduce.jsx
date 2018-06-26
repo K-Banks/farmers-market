@@ -272,12 +272,17 @@ const availableProduce = [
 
 function SeasonalProduce() {
   return(
-    <div>
+    <div className='produceFlex'>
       {availableProduce.map((season, index) =>
         <Produce month={season.month}
           selection={season.selection}
           key={index}/>
       )}
+      <style jsx>{`.produceFlex {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: auto;
+        }`}</style>
     </div>
   );
 }

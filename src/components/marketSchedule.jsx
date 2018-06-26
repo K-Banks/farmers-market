@@ -52,6 +52,7 @@ function MarketSchedule() {
       <style jsx>{`.marketFlex {
           display: flex;
           flex-direction: row;
+          justify-content: center;
         }`}</style>
     </div>
   );
