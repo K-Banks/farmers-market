@@ -3,13 +3,16 @@ import PropTypes from 'prop-types';
 
 function Schedule(props) {
   return(
-    <div>
+    <div className='paddington'>
       <h3>{props.day}</h3>
       {props.location}
       <br></br>
       {props.hours}
       <br></br>
       {props.booth}
+      <style jsx>{`.paddington{
+        padding: 10px;
+      }`}</style>
     </div>
   );
 }
